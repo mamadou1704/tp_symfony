@@ -1,0 +1,33 @@
+{% extends 'navbar.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+<div class="container">
+    <section>
+    <h1 class="display-4">Register</h1>
+    <article>
+        {{ form_start(form) }}
+        <div class="form_group">
+            {{ form_row(form.name,{'attr': {'class': 'form_control'} }) }}
+       </div>
+       <div class="form_group">
+            {{ form_row(form.firstname,{'attr': {'class': 'form_control'} }) }}
+       </div>
+         <div class="form_group">
+            {{ form_row(form.mail,{'attr':{'class':'form_control'} }) }}
+           </div>
+           <div class="form_group">
+            {{ form_row(form.password.first,{'attr':{'class':'form_control'} }) }}
+           </div>
+           <div class="form_group">
+            {{ form_row(form.password.second,{'attr':{'class':'form_control'} }) }}
+           </div>
+        <button type='submit' class='btn btn-primary'>Register</button>
+        {{ form_end(form) }}
+    </article>
+    </section>
+</div>
+{% endblock %}
+
